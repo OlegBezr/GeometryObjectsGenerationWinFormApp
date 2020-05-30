@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class RectanglePrimitive : AbstractPrimitive
+    public class RectanglePrimitive : AbstractPrimitive
     {
+        public RectanglePrimitive():base()
+        {
+            this.size = new Vector3(0, 0, 0);
+        }
         public RectanglePrimitive(Vector3 pos, double xSize, double ySize) : base(pos)
         {
-            size = new Vector3(xSize, ySize, 10);
+            this.size = new Vector3(xSize, ySize, 10);
         }
     }
 }

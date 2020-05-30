@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class CubePrimitive : AbstractPrimitive
+    public class CubePrimitive : AbstractPrimitive
     {
+        public CubePrimitive():base()
+        {
+            this.size = new Vector3(0, 0, 0);
+        }
         public CubePrimitive(Vector3 pos, double size) : base(pos)
         {
             this.size = new Vector3(size, size, size);

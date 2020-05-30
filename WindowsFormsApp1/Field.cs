@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Field
+    public class Field
     {
         public Field()
         {
@@ -23,6 +23,20 @@ namespace WindowsFormsApp1
         public void DeleteObject(AbstractPrimitive obj)
         {
             Primitives.Remove(obj);
+        }
+
+        public bool CheckIntersection(int i, int j)
+        {
+            if (i < 0 || j < 0)
+            {
+                return false;
+            }
+            else if (i >= Primitives.Count || j >= Primitives.Count)
+            {
+                return false;
+            }
+
+            return Primitives[i].CheckIntersection(Primitives[j]);
         }
     }
 }

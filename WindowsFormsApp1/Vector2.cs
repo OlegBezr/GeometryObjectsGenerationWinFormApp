@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    class Vector2 {
+    public class Vector2 {
         public Vector2(double x = 0, double y = 0) {
             this.x = x;
             this.y = y;

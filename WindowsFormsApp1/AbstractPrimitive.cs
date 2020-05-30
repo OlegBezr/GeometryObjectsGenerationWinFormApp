@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    abstract class AbstractPrimitive
+    public abstract class AbstractPrimitive
     {
+        public AbstractPrimitive()
+        {
+            this.pos = new Vector3(0, 0, 0);
+        }
         public AbstractPrimitive(Vector3 pos)
         {
             this.pos = pos;
@@ -16,7 +20,7 @@ namespace WindowsFormsApp1
         public Vector3 pos;
         public Vector3 size;
 
-        public bool CheckIntersection(AbstractPrimitive obj) {
+        public virtual bool CheckIntersection(AbstractPrimitive obj) {
             AbstractPrimitive[][] pairs = new[] { new[] { obj, this }, new[] { this, obj } };
 
             AbstractPrimitive[] pair;
